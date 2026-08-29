@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>采购全流程实务｜新加坡采购学堂</title>
+<meta name="description" content="拆解企业采购从需求识别到付款结算的完整链条：S2C 与 P2P 框架、规格书撰写、RFI/RFQ/RFP 询价、供应商评估、商务谈判、订单合同管理、三单匹配与 InvoiceNow 电子发票，并介绍品类管理与主流采购系统。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html"><span class="logo-mark">SG</span> 新加坡采购学堂</a>
+    <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html">首页</a>
+      <a href="overview.html">行业概览</a>
+      <a href="government.html">政府采购</a>
+      <a href="process.html">采购实务</a>
+      <a href="legal.html">法律合规</a>
+      <a href="supplychain.html">供应链生态</a>
+      <a href="career.html">职业与认证</a>
+      <a href="glossary.html">术语表</a>
+      <a href="quiz.html">自测题库</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap page">
+  <article class="content">
+    <header class="page-head">
+      <p class="eyebrow">模块 3</p>
+      <h1>采购全流程实务</h1>
+      <div class="intro"><p>拿到一张采购申请单之后，到货款付出去之前，中间到底要经过多少步？这一章把企业采购从需求识别到付款结算的完整链条拆开讲：既有 S2C／P2P 的框架总览，也有规格书怎么写、询价文件怎么选、供应商怎么评、价格怎么谈、订单合同怎么管、发票怎么付的实操细节，最后带你认识品类管理、SRM 等进阶方法和 SAP、Ariba 等主流系统。</p><p>内容立足新加坡商业环境：询价环节与政府采购的 ITQ/ITT 对照，付款环节介绍本地的 InvoiceNow 电子发票网络与账期惯例。学完本章，你应当能独立走完一单从头到尾的采购，并听懂招聘 JD 里 Sourcing、P2P、TCO、SRM 这些关键词。</p></div>
+    </header>
+    <div class="callout keypoints">
+      <h2>🔑 关键要点</h2>
+      <ul>
+        <li>企业采购全流程分为 S2C（寻源到签约）与 P2P（采购到付款）两段：前者决定「向谁买、按什么条件买」，后者执行「下单、收货、付款」。</li>
+        <li>规格说明书分功能规格与技术规格：功能规格只约定要达到的结果，给供应商创新空间；技术规格便于比价和验收，但方案责任回到买方。</li>
+        <li>RFI 摸市场、RFQ 比价格、RFP 比方案；企业的 RFQ/RFP 大致对应政府采购的 ITQ 与 ITT。</li>
+        <li>选供应商要用事先定好权重的评分矩阵，并以总拥有成本（TCO）而非最低报价做决策——最低价中标不等于最低成本。</li>
+        <li>谈判上桌前先定目标价、底线和 BATNA；价格之外，账期、交期、质保都是可以交换的谈判筹码。</li>
+        <li>PO 经供应商确认即具合同约束力；付款前必须完成 PO、收货单（GRN）、发票的三单匹配，这是最核心的内控点。</li>
+        <li>InvoiceNow 是由 IMDA 推动、基于国际 Peppol 标准的新加坡全国电子发票网络，IRAS 正分阶段要求 GST 注册企业采用。</li>
+        <li>Kraljic 矩阵按支出金额与供应风险把品类分为杠杆、战略、瓶颈、常规四类，分别适用竞价、结盟、保供、自动化四种策略。</li>
+      </ul>
+    </div>
+    <nav class="toc" aria-label="本页导览">
+      <h2>本页导览</h2>
+      <ol>
+        <li><a href="#s1">流程总览：S2C 与 P2P 两段式框架</a></li>
+        <li><a href="#s2">需求识别与规格说明书</a></li>
+        <li><a href="#s3">寻源与询价：RFI、RFQ、RFP</a></li>
+        <li><a href="#s4">供应商评估与选择</a></li>
+        <li><a href="#s5">商务谈判：准备决定结果</a></li>
+        <li><a href="#s6">订单与合同管理</a></li>
+        <li><a href="#s7">发票与付款：三单匹配与 InvoiceNow</a></li>
+        <li><a href="#s8">进阶方法与常用系统</a></li>
+      </ol>
+    </nav>
+    <section id="s1">
+      <h2>流程总览：S2C 与 P2P 两段式框架</h2>
+      <p>企业采购的完整生命周期，业界通常拆成两段：<strong>寻源到签约（<span class="en">Source-to-Contract, S2C</span>）</strong>与<strong>采购到付款（<span class="en">Procure-to-Pay, P2P</span>）</strong>，合起来叫 <span class="en">Source-to-Pay（S2P）</span>。S2C 回答「向谁买、按什么条件买」，是策略性工作；P2P 回答「怎么把货买回来、把钱付对」，是执行性工作。两段的分界点是合同或价格协议的签署。</p><div class="table-scroll"><table><thead><tr><th>阶段</th><th>关键步骤</th><th>主要产出</th><th>典型负责人</th></tr></thead><tbody><tr><td>S2C</td><td>需求识别 → 规格制定 → 寻源与询价（RFI/RFQ/RFP）→ 评估选择 → 谈判 → 签约</td><td>规格说明书、评分矩阵、合同／框架协议</td><td>品类经理、寻源经理（<span class="en">Sourcing Manager</span>）</td></tr><tr><td>P2P</td><td>采购申请（<span class="en">Purchase Requisition, PR</span>）→ 审批 → 下达采购订单（PO）→ 收货验收 → 发票匹配 → 付款</td><td>PO、收货单（GRN）、付款凭证</td><td>采购执行（<span class="en">Buyer</span>）、应付账款（<span class="en">AP</span>）</td></tr></tbody></table></div><p>在成熟企业里，这两段往往由不同团队负责，中间靠合同库和价格主数据衔接。贯穿全程的内控原则是<strong>职责分离（<span class="en">Segregation of Duties</span>）</strong>：申请、审批、下单、收货、付款五个动作不应集中在同一个人手上，否则舞弊风险极高，审计一定会提出异议。</p><div class="tip">面试初级采购岗时，能在白纸上完整画出 S2C＋P2P 流程图并说清每步产出，是最能体现「懂行」的基本功。新加坡招聘 JD 里写的 <span class="en">P2P Specialist</span>、<span class="en">Sourcing Executive</span>，对应的正是这两段的分工。</div>
+    </section>
+    <section id="s2">
+      <h2>需求识别与规格说明书</h2>
+      <p>采购始于需求。常见的需求来源有四类：生产计划系统（MRP）自动算出的物料需求、库存跌破补货点触发的补货、内部用户提交的采购申请（PR），以及新项目立项。采购人员拿到需求后的第一件事不是找供应商，而是把需求「翻译」成供应商能够准确报价的<strong>规格说明书（<span class="en">Specification</span>）</strong>。规格写得含糊，后面比价、验收、索赔全都没有依据。</p><div class="table-scroll"><table><thead><tr><th></th><th>功能规格（<span class="en">Functional / Performance Spec</span>）</th><th>技术规格（<span class="en">Technical / Conformance Spec</span>）</th></tr></thead><tbody><tr><td>写法</td><td>描述要达到的结果与性能</td><td>精确规定材料、尺寸、工艺、图纸</td></tr><tr><td>示例</td><td>「空调系统须在室外 35°C 时把室内维持在 23±1°C」</td><td>「不锈钢 SUS304，板厚 2.0mm，按附图 A-01 加工」</td></tr><tr><td>优点</td><td>给供应商创新空间，达标责任在供应商</td><td>便于多家比价、便于到货验收</td></tr><tr><td>风险</td><td>报价口径不一，比价难度大</td><td>方案责任回到买方，容易过度规格（<span class="en">over-specification</span>）抬高成本</td></tr></tbody></table></div><p>服务类采购则写<strong>工作说明书（<span class="en">Statement of Work, SOW</span>）</strong>，明确范围、交付物、时间表与验收标准。对复杂或新技术需求，可采用早期供应商参与（<span class="en">Early Supplier Involvement, ESI</span>），在定规格阶段就请供应商提建议。</p><div class="warn">规格书直接写死某个品牌型号而不加「或同等品（<span class="en">or equivalent</span>）」，等于把自己锁进单一供应商，日后毫无议价空间；在政府采购中这样写还可能违反公开、公平竞争原则。</div>
+    </section>
+    <section id="s3">
+      <h2>寻源与询价：RFI、RFQ、RFP</h2>
+      <p>寻源（<span class="en">Sourcing</span>）先建供应商名单：从长名单筛到短名单，渠道包括现有合格供应商库、行业展会、B2B 平台和同行推荐。随后向市场发出询价文件，统称 <span class="en">RFx</span>，三种最常用：</p><div class="table-scroll"><table><thead><tr><th>文件</th><th>目的</th><th>适用场景</th><th>供应商回复内容</th></tr></thead><tbody><tr><td>RFI（<span class="en">Request for Information</span>，信息征询）</td><td>摸底市场</td><td>新品类、对供应市场不了解</td><td>公司资质与能力介绍，不含正式报价</td></tr><tr><td>RFQ（<span class="en">Request for Quotation</span>，询价）</td><td>比价格</td><td>规格明确的标准化产品</td><td>价格、交期、付款条件</td></tr><tr><td>RFP（<span class="en">Request for Proposal</span>，方案征询）</td><td>比方案</td><td>复杂需求（IT 系统、外包服务），实现路径待定</td><td>技术方案＋商务报价，按权重综合评分</td></tr></tbody></table></div><p>与政府采购对照：GeBIZ 平台上的 <strong>ITQ（<span class="en">Invitation to Quote</span>，报价采购）</strong>大致对应企业的 RFQ，用于中小额采购；<strong>ITT（<span class="en">Invitation to Tender</span>，投标邀请）</strong>对应大型 RFP／正式招标，用于金额较大的项目（现行分界为 9 万新元：不超过 9 万新元可用报价采购，超过则须公开招标，具体门槛以政府最新公布为准），详见<a href="government.html">政府采购</a>一章。私营企业流程灵活得多：可以多轮议价、允许中途澄清修改，还可用反向拍卖（<span class="en">Reverse Auction</span>）让供应商在线竞价。</p><div class="tip">发 RFQ 时务必附统一的报价模板，强制供应商拆开单价、运费、GST 分别填写，并注明报价有效期；否则收回来的报价口径五花八门，根本没法横向比较。</div>
+    </section>
+    <section id="s4">
+      <h2>供应商评估与选择</h2>
+      <p>报价回收后，用<strong>加权评分矩阵（<span class="en">Weighted Scoring Matrix</span>）</strong>做结构化比选。关键纪律是：评估维度和权重必须在开标前定好，并由采购、使用部门、质量、财务组成的跨部门小组认可，避免事后「为心仪供应商量身定权重」。</p><div class="table-scroll"><table><thead><tr><th>评估维度</th><th>权重</th><th>供应商 A</th><th>供应商 B</th></tr></thead><tbody><tr><td>价格与商务条款</td><td>30%</td><td>8 分</td><td>9 分</td></tr><tr><td>质量与认证</td><td>25%</td><td>9 分</td><td>7 分</td></tr><tr><td>交期与产能</td><td>20%</td><td>7 分</td><td>8 分</td></tr><tr><td>技术与服务</td><td>15%</td><td>8 分</td><td>6 分</td></tr><tr><td>财务稳健性</td><td>10%</td><td>7 分</td><td>8 分</td></tr><tr><td><strong>加权总分</strong></td><td>100%</td><td><strong>7.95</strong></td><td><strong>7.75</strong></td></tr></tbody></table></div><p>资质审核（<span class="en">Due Diligence</span>）在新加坡的常规动作：通过 ACRA 的 Bizfile 服务核实公司注册信息与 UEN（<span class="en">Unique Entity Number</span>）；查财报或第三方信用报告评估财务健康度；核对认证——制造类看 ISO 9001 质量管理体系，涉现场施工的看 bizSAFE 安全认证等级，有环保要求的看 ISO 14001。关键物料还要索取样品送检，并安排实地考察／工厂审核（<span class="en">Factory Audit</span>），亲眼看产线、仓储、质检流程与现场管理。</p><p>决策要用<strong>总拥有成本（<span class="en">Total Cost of Ownership, TCO</span>）</strong>思维：采购价只是冰山露出水面的一角，水下还有运费保险、关税与 GST、安装调试、备件维护、能耗、停机损失和报废处置。</p><div class="warn">最低价中标 ≠ 最低成本。低价供应商若交货不稳、次品率高，产线停一天的损失可能超过全年省下的差价；评分矩阵里永远不要让价格权重一家独大。</div>
+    </section>
+    <section id="s5">
+      <h2>商务谈判：准备决定结果</h2>
+      <p>谈判的胜负八成在上桌前就定了。准备阶段要明确三个数：<strong>目标价（<span class="en">Target</span>）</strong>、<strong>底线（<span class="en">Walk-away Point</span>）</strong>，以及你的 <strong>BATNA（<span class="en">Best Alternative to a Negotiated Agreement</span>，谈判破裂时的最佳替代方案）</strong>——比如第二名供应商的报价、自制方案或推迟采购。BATNA 越强，你越敢坚持；同时也要推演对方的 BATNA，判断谁更「输不起」。双方底线之间的重叠区间称为 ZOPA（<span class="en">Zone of Possible Agreement</span>），谈判就是在这个区间内博弈。另一件功课是成本拆分分析（<span class="en">Cost Breakdown Analysis</span>）：把报价拆成材料、人工、制造费用与利润，用公开的原材料指数验证对方的涨价理由。</p><div class="table-scroll"><table><thead><tr><th>谈判议题</th><th>买方常见诉求</th><th>可交换的筹码</th></tr></thead><tbody><tr><td>价格</td><td>降价、阶梯数量折扣</td><td>承诺采购量、签多年合约</td></tr><tr><td>账期（<span class="en">Payment Terms</span>）</td><td>30–60 天月结</td><td>提前付款换现金折扣（如 <code>2/10 net 30</code>）</td></tr><tr><td>交期（<span class="en">Lead Time</span>）</td><td>缩短交期、分批交付</td><td>提前共享需求预测（<span class="en">Forecast</span>）</td></tr><tr><td>质保（<span class="en">Warranty</span>）</td><td>延长保修、明确响应时限</td><td>接受合理的免责范围</td></tr></tbody></table></div><p>新加坡是多元文化商业环境，对手可能来自本地、中国大陆、马来西亚、印度或欧美，谈判风格差异很大，但通行规范一致：守时、基于数据说话、会后当天发会议纪要（<span class="en">Meeting Minutes</span>）书面确认每一项共识。</p><div class="tip">别把所有筹码押在价格上。把账期从 30 天谈到 60 天、把质保从 12 个月谈到 24 个月，对公司现金流和风险的价值常常不亚于降价一两个百分点。</div>
+    </section>
+    <section id="s6">
+      <h2>订单与合同管理</h2>
+      <p>谈定后进入订单与合同环节。<strong>采购订单（<span class="en">Purchase Order, PO</span>）</strong>在法律上是买方发出的要约，供应商回传订单确认（<span class="en">Order Acknowledgement</span>）即告承诺、合同成立（法律细节见<a href="legal.html">合同与法律</a>一章）。一张合格的 PO 应写明：料号与描述、数量、单价与币种、交期、交货地点与贸易条款（<span class="en">Incoterms</span>，如 FOB、DDP）、付款条件，以及所引用的框架协议编号。</p><p>重复性采购不必每单都谈。签<strong>框架协议（<span class="en">Framework Agreement</span>）</strong>或开口订单（<span class="en">Blanket PO</span>）锁定一段时期的价格与条款，日常用叫料单（<span class="en">Call-off Order</span>）执行即可。服务类合同要附 <strong>SLA（<span class="en">Service Level Agreement</span>，服务水平协议）</strong>，定义可量化的 KPI——准时足量交付率（<span class="en">OTIF, On-Time In-Full</span>）、故障响应时间、次品率等——并事先约定未达标的补救机制：服务抵扣、扣款或限期整改。</p><p>交付与验收：收货时对照 PO 与送货单（<span class="en">Delivery Order, DO</span>）核数量，质检按 AQL 抽样标准判定批次合格与否，然后在系统里生成<strong>收货单（<span class="en">Goods Received Note, GRN</span>）</strong>。例外情形要有预设流程：短装超装、运输破损、不合格品退换、延迟交付的催货（<span class="en">Expediting</span>）与违约金（<span class="en">Liquidated Damages</span>）索赔。任何变更走变更单（<span class="en">PO Amendment</span>），绝不口头改单。</p><div class="warn">「先收货、后补单」（<span class="en">after-the-fact PO</span>）是内控大忌：没有 PO 就让供应商发货，等于绕过了审批与预算控制，是内外部审计必抓的红旗事项。</div>
+    </section>
+    <section id="s7">
+      <h2>发票与付款：三单匹配与 InvoiceNow</h2>
+      <p>付款前最核心的控制是<strong>三单匹配（<span class="en">3-Way Match</span>）</strong>：应付账款团队把三份单据互相核对，一致才放行付款；差异超出预设容差（<span class="en">Tolerance</span>，如 ±2% 或固定金额）时系统自动挂起，退回采购查明原因。纯服务类采购收不了货，常用 PO＋发票的两单匹配，辅以服务完成确认。</p><div class="table-scroll"><table><thead><tr><th>单据</th><th>回答的问题</th></tr></thead><tbody><tr><td>采购订单（PO）</td><td>我们订了什么、约定什么价</td></tr><tr><td>收货单（GRN）</td><td>实际收到了什么、收了多少</td></tr><tr><td>发票（<span class="en">Invoice</span>）</td><td>供应商实际要收多少钱</td></tr></tbody></table></div><p>新加坡特色环节：<strong>InvoiceNow</strong> 是由资讯通信媒体发展局（<span class="en">IMDA</span>）推动、基于国际 <span class="en">Peppol</span> 标准的全国电子发票网络——发票以结构化数据在买卖双方的财务系统之间直连传输，免去 PDF 人工录入和错漏。向政府开票通过 Vendors@Gov 门户提交，政府也鼓励供应商经 InvoiceNow 直连开票。税务方面，IRAS 已宣布分阶段要求 GST 注册企业通过 InvoiceNow 向税务局传送发票数据：从新注册企业起步——2025 年 11 月起适用于新成立并自愿注册 GST 的公司，2026 年 4 月起扩展至所有新的自愿注册企业——并已宣布拟逐步扩展至全部 GST 注册企业，具体时间表以 IRAS 官方最新公布为准；发票本身须符合 GST 税务发票的开具要求（现行 GST 税率为 9%，自 2024 年 1 月 1 日起施行）。</p><p>账期实践：新加坡 B2B 常见 30 天月结，大企业对供应商给 45–60 天也不罕见；付款多走 GIRO 银行转账或 PayNow Corporate。若现金充裕，可主动用提前付款换现金折扣（如 <code>2/10 net 30</code>：10 天内付款折 2%）。</p><div class="warn">警惕「变更收款账户」类邮件诈骗（<span class="en">Business Email Compromise</span>）：骗子冒充供应商发邮件通知换银行账户。任何账户变更都必须用留档电话回拨供应商核实，绝不能仅凭邮件就改主数据——此类案件在新加坡屡有发生。</div>
+    </section>
+    <section id="s8">
+      <h2>进阶方法与常用系统</h2>
+      <h3>品类管理与供应商关系管理</h3><p><strong>品类管理（<span class="en">Category Management</span>）</strong>把公司支出按供应市场特性分组（电子元器件、物流、IT 服务、MRO 等），先做支出分析（<span class="en">Spend Analysis</span>），再逐品类定策略。经典工具是 <strong>Kraljic 矩阵</strong>，按「支出金额」与「供应风险」两个维度分四类：</p><div class="table-scroll"><table><thead><tr><th>品类类型</th><th>特征</th><th>策略</th></tr></thead><tbody><tr><td>杠杆（<span class="en">Leverage</span>）</td><td>高支出、低风险</td><td>集中量竞标压价、反向拍卖</td></tr><tr><td>战略（<span class="en">Strategic</span>）</td><td>高支出、高风险</td><td>长期伙伴关系、联合开发</td></tr><tr><td>瓶颈（<span class="en">Bottleneck</span>）</td><td>低支出、高风险</td><td>保供优先、开发备选源、备安全库存</td></tr><tr><td>常规（<span class="en">Routine</span>）</td><td>低支出、低风险</td><td>目录采购、流程自动化</td></tr></tbody></table></div><p><strong>供应商关系管理（<span class="en">Supplier Relationship Management, SRM</span>）</strong>对供应商分层：战略供应商做季度业务回顾（<span class="en">QBR</span>）、绩效记分卡与联合改善，一般供应商只做绩效监控。战略寻源（<span class="en">Strategic Sourcing</span>）则是把上述分析、寻源、谈判、实施做成七步法的系统化项目打法。</p><h3>库存基础概念</h3><p><strong>JIT（<span class="en">Just-in-Time</span>，准时制）</strong>追求按需小批量到货、压低库存，但对供应稳定性要求极高；<strong>EOQ（<span class="en">Economic Order Quantity</span>，经济订货批量）</strong>= √(2DS÷H)，在订货成本与持有成本之间找平衡（D 为年需求量、S 为单次订货成本、H 为单位年持有成本）；<strong>安全库存（<span class="en">Safety Stock</span>）</strong>缓冲需求与交期的波动，配合再订货点（<span class="en">Reorder Point</span>）触发补货。</p><h3>常用系统与工具</h3><p>ERP 主流是 SAP（采购模块 MM，新版为 S/4HANA）与 Oracle（Fusion Cloud、NetSuite）；电子采购平台有 SAP Ariba、Coupa 等，覆盖从寻源到付款的全流程；公共部门则统一使用 GeBIZ。招聘 JD 里常见「熟悉 SAP MM / Ariba 优先」，建议尽早上手，详见<a href="career.html">职业发展</a>一章；本章术语可在<a href="glossary.html">术语表</a>中集中复习。</p><div class="tip">初学者不必贪多：先把 P2P 在任意一套 ERP 里完整跑通一遍（PR→PO→GRN→发票→付款），系统之间只是界面不同，流程逻辑是相通的。</div>
+    </section>
+    <div class="page-actions">
+      <button class="btn-done" data-module="process" type="button">○ 标记本章为已学</button>
+      <a class="btn quiz-link" href="quiz.html?module=process">去做本章测验 →</a>
+    </div>
+    <nav class="prevnext">
+      <a class="prev" href="government.html">← 上一章：政府采购与 GeBIZ</a>
+      <a class="next" href="legal.html">下一章：法律法规与合规 →</a>
+    </nav>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>新加坡采购学堂 · 内容仅供学习参考，法规要求与金额门槛请以新加坡财政部（MOF）、GeBIZ 等官方渠道的最新发布为准。</p>
+    <p>最后更新：2026年8月</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
